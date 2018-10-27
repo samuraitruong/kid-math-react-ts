@@ -36,6 +36,8 @@
   margin: 0 auto;
   font-size: 40px;
   justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .Container .item {
@@ -116,6 +118,7 @@
 
 .Right {
   float: right;
+  width: 180px;
 }
 
 .Right img {
