@@ -12,5 +12,14 @@ script:
 #   skip_cleanup: true
 #   domain: <my_name_here>.surge.sh
 #   project: ./build/
+deploy:
+  local-dir: build
+  provider: pages
+  skip-cleanup: true
+  github-token:
+    secure: "P5mz8V6OcDLTIfy9sqlgs1tNrOIHEF5LDGDYtWB+MObWGVPSpc0zqbul7pbWy1o+K/1mX1hERu7ZDuxil4CjgvCDSMkDHhgf6MUPHU3hLcERmS+fpsBjepP5CcGXJbVjarsmW4EYlGPABav4m44s4kQZZ40m38850Bs8vxBmY9+4EmBko7jYrZp5mHrF0M9RsKgbuQPJUfQWeZSqaNH92rGd/AA9b93K9RgFCG90cujvvxr5XBKvRqTQM8RTl2fJZrRDa8VOc0tqlFy4Ozh8pU3qWU3Gz52JKt1tO36nDnUjbU6KxF5iMPWCLgp8tSmC/R9U0PylqdjeCBpbAmavGqAQYwwgAHUeJBMAkEDGK9YTuGg/B7fz+qhRN87pAPYLRL2p/DPZUxKHM1kES/OxM5D1oVjR0/8a0b2PVVSo3+Xb2KUdHBxLUj2qQnFwEzqyuU7+UxS8oSYIIlZRBJJbY1X0E6BWJMD4XI0VRiO5zPUBy4P8KMnx4lvraUMj/6eMRCRoqwZOrHkTkx2ila1cte0w2gY3bFjkh7M8hXfBBVg1GzXk+QCzN2lfwO73sA2156r6nAelg2qygPl3HPoTfq8RfVkXstVIfxpshHmhs+FIRVzOsB6FrGCszD4sFeXgxwS42ybrtNloZOS6aOh4ElD2UNGTQDIQxOvB79inVgE="
+  keep-history: true
+  on:
+    branch: master
 on:
   branch: master
