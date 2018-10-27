@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-color: #c964f4;
+  background-color: #b66f6f;
   height: 40px;
   padding: 10px;
   color: white;
@@ -22,6 +22,7 @@
 
 .App-title {
   font-size: 1.5em;
+  display: inline-block;
 }
 
 .App-intro {
@@ -111,4 +112,20 @@
   font-size: 35px;
   margin-right: 30px;
   cursor: pointer;
+}
+
+.Right {
+  float: right;
+}
+
+.Right img {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.Right .Counter {
+  color: #fff;
+  font-size: 40px;
 }

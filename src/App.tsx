@@ -3,6 +3,8 @@ import * as React from "react";
 import logo from "./math-logo.svg";
 import TextControl from "./TextControl";
 import "./App.css";
+import resetIcon from "./assets/images/reset.png";
+import checkIcon from "./assets/images/check.png";
 interface IProps {
     name?: string;
 }
@@ -94,6 +96,12 @@ export default class App extends React.Component<IProps,
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Welcome to Kids Math</h1>
+                    <div className="Right">
+                        <img src={checkIcon} onClick={this.validate} />
+                        <img src={resetIcon} onClick={this.reset} />
+                        <span className="Counter">{this.state.unresolved}
+                        </span>
+                    </div>
                 </header>
                 <div className="App-intro">
                     <div className="Container">
@@ -107,16 +115,7 @@ export default class App extends React.Component<IProps,
                                 showed={this.state.validated} />)}
 
                     </div>
-                    <div className="Buttons">
-                        < button className="button" onClick={this.validate}>
-                            Check
-                        </button>
-                        <button className="button" onClick={this.reset}>Reset</button>
 
-                        <span>{this.state.unresolved}
-                        </span>
-
-                    </div>
                 </div>
             </div>
         )
