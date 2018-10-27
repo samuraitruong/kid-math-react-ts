@@ -13,6 +13,7 @@
   height: 40px;
   padding: 10px;
   color: white;
+  padding-left: 20px;
 }
 
 .App-header h1 {
@@ -33,13 +34,19 @@
   flex-wrap: wrap;
   margin: 0 auto;
   font-size: 40px;
+  justify-content: space-between;
 }
 
 .Container .item {
-  width: 300px;
-  padding: 10px 30px 10px;
+  width: 320px;
+  padding: 0px 10px 30px 10px;
   box-sizing: border-box;
   float: left;
+}
+
+.Container .item.has-input {
+  opacity: 0.4;
+  color: rgb(87, 85, 85);
 }
 
 .Container .item .formular {
@@ -52,7 +59,7 @@
 
 .Container .item .result {
   float: right;
-  width: 100px;
+  width: 120px;
 }
 
 .Container .item .result span {
@@ -60,7 +67,7 @@
 }
 
 .Container .item input {
-  width: 60px;
+  width: 80px;
   font-size: 40px;
 }
 
@@ -99,13 +106,9 @@
 }
 
 .button {
-  margin-top: 30px;
-  padding: 15px;
+  margin-top: 0px;
+  padding: 10px;
   font-size: 35px;
   margin-right: 30px;
   cursor: pointer;
-}
-
-.Container {
-  padding-top: 35px;
 }

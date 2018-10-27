@@ -8,15 +8,15 @@ interface IProps {
 }
 
 interface IState {
-    level : number,
-    items : IItem[],
-    validated : boolean;
-    unresolved : number;
-    total : number;
+    level: number,
+    items: IItem[],
+    validated: boolean;
+    unresolved: number;
+    total: number;
 }
-export default class App extends React.Component < IProps,
-IState > {
-    constructor(props : any) {
+export default class App extends React.Component<IProps,
+    IState> {
+    constructor(props: any) {
         super(props);
         this.state = this.generateMath();
         this.onChange = this
@@ -29,9 +29,9 @@ IState > {
             .reset
             .bind(this);
     }
-    public generateMath() : IState {
-        const items = new Array < IItem > ();
-        const total = Math.ceil((window.innerWidth / 310) * (window.innerHeight - 100) / 90);
+    public generateMath(): IState {
+        const items = new Array<IItem>();
+        const total = Math.ceil(((window.innerWidth - 40) / 350) * (window.innerHeight - 160) / 90);
         for (let lv = 1; lv <= total; lv++) {
             let left = Random.integer(1, 10)(Random.engines.browserCrypto)
             let right = Random.integer(1, 10)(Random.engines.browserCrypto)
@@ -52,7 +52,7 @@ IState > {
                 right
             })
         }
-        return {items, level: 7, total, unresolved: total, validated: false}
+        return { items, level: 7, total, unresolved: total, validated: false }
     }
     public reset() {
         const newSolve = this.generateMath();
@@ -64,13 +64,13 @@ IState > {
             x.ok = x
                 .input
                 .toString() === x
-                .result
-                .toString();
+                    .result
+                    .toString();
             return x;
         });
-        this.setState({items, validated: true});
+        this.setState({ items, validated: true });
     }
-    public onChange(id : number, value : string) {
+    public onChange(id: number, value: string) {
         let items = [...this.state.items];
         let resoleved = 0;
         items = items.map(x => {
@@ -92,7 +92,7 @@ IState > {
         return (
             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
+                    <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Welcome to Kids Math</h1>
                 </header>
                 <div className="App-intro">
@@ -104,7 +104,7 @@ IState > {
                                 {...item}
                                 key={item.id}
                                 onChange={this.onChange}
-                                showed={this.state.validated}/>)}
+                                showed={this.state.validated} />)}
 
                     </div>
                     <div className="Buttons">
