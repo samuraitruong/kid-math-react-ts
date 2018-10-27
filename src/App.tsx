@@ -1,4 +1,3 @@
-import * as Random from "random-js";
 import * as React from "react";
 import logo from "./math-logo.svg";
 import TextControl from "./TextControl";
@@ -31,14 +30,18 @@ export default class App extends React.Component<IProps,
             .reset
             .bind(this);
     }
+    public randomNumber(minimum: number, maximum: number) {
+        return Math.round(Math.random() * (maximum - minimum) + minimum);
+    }
+
     public generateMath(): IState {
         const items = new Array<IItem>();
         const total = Math.ceil(((window.innerWidth - 40) / 350) * (window.innerHeight - 160) / 90);
         for (let lv = 1; lv <= total; lv++) {
-            let left = Random.integer(1, 10)(Random.engines.browserCrypto)
-            let right = Random.integer(1, 10)(Random.engines.browserCrypto)
+            let left = this.randomNumber(1, 10);
+            let right = this.randomNumber(1, 10);
 
-            const rnd = Random.integer(1, 100)(Random.engines.browserCrypto) % 2;
+            const rnd = this.randomNumber(1, 100) % 2;
             const operator = rnd === 0
                 ? "+"
                 : "-";

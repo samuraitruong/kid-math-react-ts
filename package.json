@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://samuraitruong.github.io/kid-math-react-ts/",
   "dependencies": {
-    "random-js": "^1.0.8",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts-ts": "2.17.0"
@@ -13,6 +12,7 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
+    "test:coverage": "react-scripts-ts test --env=jsdom --coverage",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
