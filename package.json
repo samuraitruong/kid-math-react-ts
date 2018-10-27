@@ -2,6 +2,7 @@
   "name": "kid-math",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://samuraitruong.github.io/kid-math-react-ts/",
   "dependencies": {
     "random-js": "^1.0.8",
     "react": "^16.5.2",
