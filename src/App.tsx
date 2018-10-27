@@ -31,7 +31,7 @@ IState > {
     }
     public generateMath() : IState {
         const items = new Array < IItem > ();
-        const total = Math.ceil((window.innerWidth / 290) * (window.innerHeight - 100) / 90);
+        const total = Math.ceil((window.innerWidth / 310) * (window.innerHeight - 100) / 90);
         for (let lv = 1; lv <= total; lv++) {
             let left = Random.integer(1, 10)(Random.engines.browserCrypto)
             let right = Random.integer(1, 10)(Random.engines.browserCrypto)
