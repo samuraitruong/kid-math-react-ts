@@ -5,11 +5,12 @@
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40px;
+  float: left;
 }
 
 .App-header {
   background-color: #c964f4;
-  height: 80px;
+  height: 40px;
   padding: 10px;
   color: white;
 }
@@ -35,24 +36,31 @@
 }
 
 .Container .item {
-  width: 280px;
-  padding: 10px 20px;
+  width: 300px;
+  padding: 10px 30px 10px;
   box-sizing: border-box;
   float: left;
 }
 
 .Container .item .formular {
   float: left;
-  width: 70%;
+}
+
+.Container .item .formular span {
+  padding: 0px 5px;
 }
 
 .Container .item .result {
   float: right;
-  width: 30%;
+  width: 100px;
+}
+
+.Container .item .result span {
+  margin-right: 10px;
 }
 
 .Container .item input {
-  width: 100%;
+  width: 60px;
   font-size: 40px;
 }
 

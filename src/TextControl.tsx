@@ -16,11 +16,15 @@ export default class TextControl extends React.Component < ITextControlProp > {
     public render() {
         return (
             <div className="item" key={this.props.id}>
-                <div className="formular">{this.props.left} {this.props.operator}
-                    {this.props.right}
-                    =
+                < div className="formular">
+                    <span>{this.props.left}</span>
+                    < span >
+                        {this.props.operator}</span>
+                    < span >
+                        {this.props.right}</span>
                 </div>
                 <div className="result">
+                    <span>=</span>
                     <input
                         type="text"
                         value={this.props.input}
