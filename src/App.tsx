@@ -38,8 +38,8 @@ export default class App extends React.Component<IProps,
         const items = new Array<IItem>();
         const total = Math.ceil(((window.innerWidth - 40) / 350) * (window.innerHeight - 160) / 90);
         for (let lv = 1; lv <= total; lv++) {
-            let left = this.randomNumber(1, 12);
-            let right = this.randomNumber(1, 12);
+            let left = this.randomNumber(1, 15);
+            let right = this.randomNumber(1, 15);
 
             const rnd = this.randomNumber(1, 100) % 2;
             const operator = rnd === 0
